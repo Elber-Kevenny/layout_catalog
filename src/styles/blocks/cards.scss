@@ -1,8 +1,8 @@
 .cards-container {
-  padding: 50px 40px;
+  padding: $padding-vertical $padding-horizontal;
   display: grid;
-  grid-template-columns: repeat(1, 200px);
-  gap: 48px 46px;
+  grid-template-columns: repeat(1, $card-width);
+  gap: $gap-vertical $gap-horizontal;
   height: 100vh;
   justify-content: center;
   align-items: center;
@@ -10,19 +10,19 @@
 
 @media (min-width: 488px) {
   .cards-container {
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, $card-width);
   }
 }
 
 @media (min-width: 768px) {
   .cards-container {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, $card-width);
   }
 }
 
 @media (min-width: 1024px) {
   .cards-container {
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(4, $card-width);
   }
 }
 
@@ -39,7 +39,7 @@
   padding-left: 16px;
   padding-right: 16px;
   border: 1px solid $color-border;
-  transition: transform 300ms ease;
+  transition: transform $duration ease;
 
   &__title {
     font-family: $font-stack;
@@ -142,8 +142,8 @@
   }
 
   &__button:hover {
-    background-color: #fff;
-    color: #00acdc;
+    background-color: $color-button;
+    color: $color-terciary;
     border: 1px solid $color-terciary;
   }
 }
