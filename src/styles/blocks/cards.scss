@@ -1,17 +1,11 @@
 .cards-container {
   padding: 50px 40px;
   display: grid;
-  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(1, 200px);
   gap: 48px 46px;
   height: 100vh;
   justify-content: center;
   align-items: center;
-}
-
-@media (min-width: 480px) {
-  .cards-container {
-    grid-template-columns: repeat(1, 200px);
-  }
 }
 
 @media (min-width: 488px) {
@@ -45,6 +39,7 @@
   padding-left: 16px;
   padding-right: 16px;
   border: 1px solid $color-border;
+  transition: transform 300ms ease;
 
   &__title {
     font-family: $font-stack;
@@ -56,14 +51,12 @@
     margin: 0 0 4px;
   }
 
-  &__title:hover {
+  &:hover .card__title {
     color: $color-title;
   }
 
   &:hover {
     transform: scale(1.2);
-    transition-duration: 300ms;
-    transition-timing-function: ease;
   }
 
   &__code {
@@ -149,12 +142,8 @@
   }
 
   &__button:hover {
-    background-color: $color-button;
-    color: $color-terciary;
+    background-color: #fff;
+    color: #00acdc;
     border: 1px solid $color-terciary;
-
-    transition-property: color;
-    transition-duration: 300ms;
-    transition-timing-function: ease;
   }
 }
